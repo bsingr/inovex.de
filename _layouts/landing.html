@@ -3,20 +3,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>inovex.de</title>
-    
-    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
-
-    <meta name="robots" content="index,follow" />
-    <meta name="description" content="" />
-    <meta name="author" content="{{ site.title }}" />
-    <meta name="keywords" content="inovex" />
-    <meta name="date" content="2011-04-03T16:50:32+0200" />
-    <meta http-equiv="Content-language" content="de" />
-    
-    <link rel="stylesheet" type="text/css" href="stylesheets/landing.css" />
+    <title>{{ site.title }}</title>
+    {% include header-meta.html %}
+    <link rel="stylesheet" type="text/css" href="/stylesheets/landing.css" />
   </head>
   <body>
+    {% include top_navigation.html %}
     {{ content }}
   </body>
 </html>
