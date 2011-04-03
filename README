@@ -1,0 +1,11 @@
+== Generate Page
+
+  $ jekyll
+
+== Server
+
+  $ jekyll --server 9000 --auto
+
+== Compile SASS
+
+  $ sass --watch style:stylesheets
