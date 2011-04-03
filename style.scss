@@ -1,0 +1,107 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Helvetica";
+}
+
+ul {
+  list-style: none;
+}
+
+$width: 1000px;
+$padding: 8px;
+
+a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  
+  &:hover {
+   //text-decoration: underline;
+   color: #333;
+  }
+}
+
+#navigation {
+  width: $width;
+  padding-top: $padding / 2;
+  margin: 0px auto;
+  text-align: right;
+  
+  ul {
+    display: inline;
+    
+    li {
+      display: inline;
+      padding-left: $padding;
+      padding-right: $padding / 2;
+      border-left: 1px dotted #ddd;
+      
+      &.first {
+        border: none;
+      }
+    }
+  }
+}
+
+#panel {
+  clear: both;
+  width: $width;
+  margin: 130px auto;
+  $slice-width: $width / 4 - $padding * 2;
+  
+  .slice {
+    $height: 300px;
+    padding-left: $padding * 2;
+    width: $slice-width;
+    min-height: $height;
+    float: left;
+    background: url("/images/split.jpg") 0px ($height - 200px)/ 2 no-repeat;
+    
+    h2 {
+      color: #666;
+      margin: $padding * 7 $padding $padding * 3 $padding ;
+    }
+    
+    p {
+      margin: $padding;
+      color: #333;
+      letter-spacing: -1px;
+    }
+    
+    ul {
+      margin: $padding;
+      li {
+        float: left;
+        
+        a {
+          color: #333;
+          padding-right: $padding / 2;
+        }
+      }
+    }
+  }
+  
+  .logo {
+    background: none;
+    
+    h1 {
+      text-align: center;
+      color: #00006E;
+    }
+    
+    p {
+      text-align: center;
+    }
+    
+    img {
+      $size: $slice-width * 0.33;
+      width: $size;
+      height: $size;
+      margin-top: $padding * 7;
+      margin-left: ($slice-width - $size) / 2;
+    }
+  }
+}

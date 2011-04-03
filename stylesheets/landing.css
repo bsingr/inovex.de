@@ -1,0 +1,68 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Helvetica"; }
+
+ul {
+  list-style: none; }
+
+a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold; }
+  a:hover {
+    color: #333; }
+
+#navigation {
+  width: 1000px;
+  padding-top: 4px;
+  margin: 0px auto;
+  text-align: right; }
+  #navigation ul {
+    display: inline; }
+    #navigation ul li {
+      display: inline;
+      padding-left: 8px;
+      padding-right: 4px;
+      border-left: 1px dotted #ddd; }
+      #navigation ul li.first {
+        border: none; }
+
+#panel {
+  clear: both;
+  width: 1000px;
+  margin: 130px auto; }
+  #panel .slice {
+    padding-left: 16px;
+    width: 234px;
+    min-height: 300px;
+    float: left;
+    background: url("/images/split.jpg") 0px 50px no-repeat; }
+    #panel .slice h2 {
+      color: #666;
+      margin: 56px 8px 24px 8px; }
+    #panel .slice p {
+      margin: 8px;
+      color: #333;
+      letter-spacing: -1px; }
+    #panel .slice ul {
+      margin: 8px; }
+      #panel .slice ul li {
+        float: left; }
+        #panel .slice ul li a {
+          color: #333;
+          padding-right: 4px; }
+  #panel .logo {
+    background: none; }
+    #panel .logo h1 {
+      text-align: center;
+      color: #00006E; }
+    #panel .logo p {
+      text-align: center; }
+    #panel .logo img {
+      width: 77.22px;
+      height: 77.22px;
+      margin-top: 56px;
+      margin-left: 78.39px; }
