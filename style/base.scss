@@ -1,0 +1,49 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Helvetica";
+}
+
+ul {
+  list-style: none;
+}
+
+$width: 1000px;
+$padding: 8px;
+$bright-text: #ccc;
+$dark-text: #333;
+$inovex-blue: #00006E;
+
+a {
+  color: $bright-text;
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  
+  &:hover {
+   color: $dark-text;
+  }
+}
+
+#top-navigation {
+  width: $width;
+  padding-top: $padding / 2;
+  margin: 0px auto;
+  text-align: right;
+  
+  ul {
+    display: inline;
+    
+    li {
+      display: inline;
+      padding-left: $padding;
+      padding-right: $padding / 2;
+      border-left: 1px dotted #ddd;
+      
+      &.first {
+        border: none;
+      }
+    }
+  }
+}
