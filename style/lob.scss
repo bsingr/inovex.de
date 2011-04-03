@@ -1,1 +1,94 @@
 @import "base";
+
+#header {
+  position: fixed;
+  background: #fff;
+  margin: 0px;
+  @include box-shadow(0 0 10px #aaa);
+}
+
+#logo {
+  line-height: 0;
+  display: inline;
+  margin: 10px 10px 10px 50px;
+}
+
+#top-navigation {
+  margin: 0 10px 0 0;
+  display: inline;
+  float: right;
+}
+
+#main-navigation {
+  @include horizontal-navigation;
+  display: inline;
+  margin-left: 30%;
+  li {
+    a {
+      color: #999;
+      font-size: 12px;
+      font-weight: bold;
+      padding: $padding $padding*1.5;
+      &:hover {
+        color: #333;
+      }
+    }
+    &.active a {
+      color: #666;
+      @include background-gradient(#ececec, #ddd);
+      @include border-radius(5px, 5px, 0, 0);
+      text-shadow: #fff 1px 1px;
+    }
+  }
+}
+
+#sub-navigation {
+  @include horizontal-navigation;
+  @include background-gradient(#ddd, #fcfcfc);
+  ul {
+    margin-left: 40%;
+    padding: $padding*1.5 0;
+    li {
+      a {
+        font-size: 14px;
+        padding: $padding/2 $padding;
+        color: #999;
+        text-shadow: #fff 1px 1px;
+        &:hover {
+          color: #333;
+        }
+        
+      }
+      &.active a {
+        @include border-radius(5px, 5px, 5px, 5px);
+        background: #fff;
+      }
+    }
+  }
+}
+
+#pointer {
+  @include border-radius(5px, 5px, 5px, 5px);
+  border: 1px solid #ddd;
+  position: fixed;
+  top: 165px;
+  right: 50px;
+  height: 40px;
+  width: 50px;
+}
+
+#pages {
+  background: #fff;
+  padding-top: 170px;
+  .page {
+    margin: 0 30% 500px 10%;
+    a[name] {
+      position: absolute;
+      height: 40px;
+      width: 40px;
+      right: 50px;
+      margin-top: 20px;
+      color: orange;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@mixin horizontal-navigation {
+  li {
+    display: inline;
+    a {
+      display: inline-block;
+    }
+  }  
+}
+
+@mixin border-radius($lt, $rt, $lb, $rb) {
+  -webkit-border-radius: $lt $rt $lb $rb;
+}
+
+@mixin background-gradient($from, $to) {
+  background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+}
+
+@mixin box-shadow($args) {
+  -webkit-box-shadow: $args;
+}

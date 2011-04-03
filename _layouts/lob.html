@@ -6,11 +6,22 @@
     <title>{{ site.title }} - {{ page.title }}</title>
     {% include header-meta.html %}
     <link rel="stylesheet" type="text/css" href="/stylesheets/lob.css" />
+    <script type="text/javascript" charset="utf-8" src="/javascripts/jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/javascripts/jquery-scrollto.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/javascripts/pages.js"></script>
   </head>
   <body>
-    {% include top_navigation.html %}
     <div id="header">
-      
+      <div id="logo">
+        <a href="/">
+          <img src="../images/inovex_logo_square.png" />
+        </a>
+      </div>
+      {% include top_navigation.html %}
+      {% include main_navigation.html %}
+      {% include lob_ad_navigation.html %}
+    </div>
+    <div id="pointer">
     </div>
     {{ content }}
   </body>
