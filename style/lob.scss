@@ -1,94 +1,116 @@
 @import "base";
 
+.boundary {
+  width: $width;
+  margin: 0px auto;
+}
+
+$main-navigation-top: 100px - 22px; // - top navigation
+$main-navigation-height: $padding * 2 + 14px + 1px;
+$sub-navigation-height: 48px;
+$header-height: $main-navigation-top + $main-navigation-height + 
+                $sub-navigation-height + 22px + 1px;
+
 #header {
   position: fixed;
   background: #fff;
-  margin: 0px;
+  // go to off to render shadow correctly
+  width: 102%;
+  margin-left: -1%;
+  height: $header-height;
+  @include background-gradient(lighten($inovex-blue, 5%), 
+                               darken($inovex-blue, 5%));
   @include box-shadow(0 0 10px #aaa);
-}
 
-#logo {
-  line-height: 0;
-  display: inline;
-  margin: 10px 10px 10px 50px;
-}
-
-#top-navigation {
-  margin: 0 10px 0 0;
-  display: inline;
-  float: right;
-}
-
-#main-navigation {
-  @include horizontal-navigation;
-  display: inline;
-  margin-left: 30%;
-  li {
-    a {
-      color: #999;
-      font-size: 12px;
-      font-weight: bold;
-      padding: $padding $padding*1.5;
-      &:hover {
-        color: #333;
-      }
-    }
-    &.active a {
-      color: #666;
-      @include background-gradient(#ececec, #ddd);
-      @include border-radius(5px, 5px, 0, 0);
-      text-shadow: #fff 1px 1px;
+  #logo {
+    position: absolute;
+    display: block;
+    background: white url($inovex-logo) center no-repeat;
+    height: 90px;
+    width: 90px;
+    margin-top: $padding * 2.5;
+    @include border-radius(10px, 10px, 10px, 10px);
+    
+    span {
+      @include readable-hide;
     }
   }
-}
 
-#sub-navigation {
-  @include horizontal-navigation;
-  @include background-gradient(#ddd, #fcfcfc);
-  ul {
-    margin-left: 40%;
-    padding: $padding*1.5 0;
+  #top-navigation {
+    // blue won't work so use underline and bright color
+    a:hover {
+      color: $bright-text;
+      text-decoration: underline;
+    };
+  }
+
+  #main-navigation {
+    @include horizontal-navigation;
+    z-index: 200;
+    position: absolute;
+    margin-top: $main-navigation-top;
+    height: $main-navigation-height;
+    display: block;
+    width: $width;
+    
     li {
+      float: right;
       a {
-        font-size: 14px;
-        padding: $padding/2 $padding;
-        color: #999;
-        text-shadow: #fff 1px 1px;
+        color: $bright-text;
+        font-size: 12px;
+        font-weight: bold;
+        padding: $padding $padding*1.5;
         &:hover {
-          color: #333;
+          color: white;
         }
-        
       }
       &.active a {
-        @include border-radius(5px, 5px, 5px, 5px);
-        background: #fff;
+        color: #666;
+        @include background-gradient(#ececec, #ddd);
+        @include border-radius(5px, 5px, 0, 0);
+        border: 1px solid white;
+        border-bottom: none;
+        text-shadow: #fff 1px 1px;
       }
     }
   }
-}
 
-#pointer {
-  @include border-radius(5px, 5px, 5px, 5px);
-  border: 1px solid #ddd;
-  position: fixed;
-  top: 165px;
-  right: 50px;
-  height: 40px;
-  width: 50px;
+  #sub-navigation {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    height: $sub-navigation-height;
+    margin-top: $main-navigation-top + $main-navigation-height - 1px;
+    @include horizontal-navigation;
+    @include background-gradient(#ddd, #fcfcfc);
+    //@include box-shadow(0 -3px 3px white);
+    border-top: 1px solid white;
+    ul {
+      padding: $padding*1.5 0;
+      li {
+        a {
+          font-size: 14px;
+          padding: $padding/2 $padding;
+          color: #999;
+          text-shadow: #fff 1px 1px;
+          &:hover {
+            color: #333;
+          }
+          border: 1px solid transparent;
+        }
+        &.active a {
+          @include border-radius(5px, 5px, 5px, 5px);
+          background: #fff;
+          border: 1px solid $bright-text;
+        }
+      }
+    }
+  }
 }
 
 #pages {
-  background: #fff;
-  padding-top: 170px;
+  padding-top: $header-height + $padding * 2;
   .page {
-    margin: 0 30% 500px 10%;
-    a[name] {
-      position: absolute;
-      height: 40px;
-      width: 40px;
-      right: 50px;
-      margin-top: 20px;
-      color: orange;
-    }
+    margin: 0px 0px 500px 0px;
   }
 }

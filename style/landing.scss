@@ -62,7 +62,7 @@
     h1 {
       text-align: center;
       color: $inovex-blue;
-      background: url(/images/inovex_logo_square.png) no-repeat;
+      background: url($inovex-logo) no-repeat;
       
       // logo
       $size: $slice-width * 0.33;

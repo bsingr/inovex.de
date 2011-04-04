@@ -12,17 +12,17 @@
   </head>
   <body>
     <div id="header">
-      <div id="logo">
-        <a href="/">
-          <img src="../images/inovex_logo_square.png" />
+      <div class="boundary">
+        <a id="logo" href="/">
+          <span>Zur&uuml;ck zur Startseite</span>
         </a>
-      </div>
-      {% include top_navigation.html %}
-      {% include main_navigation.html %}
+        {% include top_navigation.html %}
+        {% include main_navigation.html %}
+      </div>  
       {% include lob_ad_navigation.html %}
     </div>
-    <div id="pointer">
+    <div class="boundary">
+      {{ content }}
     </div>
-    {{ content }}
   </body>
 </html>
