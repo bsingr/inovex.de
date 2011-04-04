@@ -15,8 +15,12 @@
     background: url("/images/split.jpg") 0px ($height - 200px)/ 2 no-repeat;
     
     h2 {
-      color: #666;
-      margin: $padding * 7 $padding $padding * 3 $padding ;
+      a {
+        margin: $padding * 7 $padding $padding * 3 $padding;
+        font-size: 1em;
+        color: #666;
+        display: block;
+      }
     }
     
     p {
