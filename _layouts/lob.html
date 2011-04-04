@@ -11,18 +11,6 @@
     <script type="text/javascript" charset="utf-8" src="/javascripts/pages.js"></script>
   </head>
   <body>
-    <div id="header">
-      <div class="boundary">
-        <a id="logo" href="/">
-          <span>Zur&uuml;ck zur Startseite</span>
-        </a>
-        {% include top_navigation.html %}
-        {% include main_navigation.html %}
-      </div>  
-      {% include lob_ad_navigation.html %}
-    </div>
-    <div class="boundary">
-      {{ content }}
-    </div>
+    {{ content }}
   </body>
 </html>
