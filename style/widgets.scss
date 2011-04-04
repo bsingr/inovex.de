@@ -18,3 +18,10 @@
 @mixin box-shadow($args) {
   -webkit-box-shadow: $args;
 }
+
+// hide but enable screen readers to show the text
+@mixin readable-hide() {
+  position: absolute;
+  margin-left: -9999em;
+  overflow: hidden;
+}
