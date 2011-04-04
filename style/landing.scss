@@ -33,10 +33,24 @@
       margin: $padding;
       li {
         float: left;
+        list-style-type: disc;
+        margin-left: $padding - 2px;
+        list-style-position: inside;
         
         a {
-          color: $dark-text;
+          color: $inovex-blue;
           padding-right: $padding / 2;
+          
+          // make underlines to better distiguish between different links
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        
+        // no circle style for the first element
+        &.first {
+          list-style-type: none;
+          margin-left: 0;
         }
       }
     }

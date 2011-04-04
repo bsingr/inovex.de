@@ -14,7 +14,7 @@ $width: 1000px;
 $padding: 8px;
 $bright-text: #ccc;
 $dark-text: #333;
-$inovex-blue: #00006E;
+$inovex-blue: #052B69;
 
 a {
   color: $bright-text;
@@ -23,7 +23,7 @@ a {
   font-weight: bold;
   
   &:hover {
-   color: $dark-text;
+   color: $inovex-blue;
   }
 }
 
