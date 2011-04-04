@@ -8,36 +8,59 @@ body {
 .boundary {
   width: $width;
   margin: 0px auto;
-  p {
-    line-height: 1.4em;
-    margin: $padding;
+  $side-panel-width: $width / 5;
+  .side-panel {
+    width: $side-panel-width;
+    margin: $padding 0;
+    float: left;
+    li {
+      margin: $padding;
+      list-style-type: square;
+      list-style-position: inside;
+      color: desaturate(lighten($inovex-blue, 40%), 50%);
+      a {
+        color: $inovex-blue;
+        text-shadow: #fff 1px 1px;
+        display: inline-block;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
+  
   h2 {
-    margin: $padding;
+    margin: $padding $padding $padding ($side-panel-width + $padding);
     color: $dark-text;
   }
-  .boxed {
-    margin: $padding;
-    li {
-      margin: 1.5% 1.5%;
-      width: 29%;
-      @include vertical-background-gradient(#fff, #eee);
-      border: 2px solid desaturate(lighten($inovex-blue, 60%), 50%);
-      @include border-radius(10px, 10px, 10px, 10px);
-      float: left;
-      h3 {
-        color: desaturate(lighten($inovex-blue, 40%), 50%);
-        font-size: 40px;
-        text-align: center;
-        height: 200px;
-        line-height: 200px;
-        vertical-align: center;
-      }
-      &:hover {
-        border-color: $inovex-orange;
-        cursor: pointer;
+  .page-content {
+    margin: $padding $padding $padding ($side-panel-width + $padding);
+    p {
+      line-height: 1.4em;
+    }
+    .boxed {
+      margin: $padding;
+      li {
+        margin: 1.5% 1.5%;
+        width: 29%;
+        @include vertical-background-gradient(#fff, #eee);
+        border: 2px solid desaturate(lighten($inovex-blue, 60%), 50%);
+        @include border-radius(10px, 10px, 10px, 10px);
+        float: left;
         h3 {
-          color: $inovex-orange;
+          color: desaturate(lighten($inovex-blue, 40%), 50%);
+          font-size: 40px;
+          text-align: center;
+          height: 200px;
+          line-height: 200px;
+          vertical-align: center;
+        }
+        &:hover {
+          border-color: $inovex-orange;
+          cursor: pointer;
+          h3 {
+            color: $inovex-orange;
+          }
         }
       }
     }
